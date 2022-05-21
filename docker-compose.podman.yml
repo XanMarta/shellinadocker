@@ -1,7 +1,8 @@
 version: "3.7"
 services:
   shellinabox:
-    image: xanmarta/shellinadocker:1.0.0
+    image: xanmarta/shellinadocker:podman
+    privileged: true
     ports:
       - 8000:8000
     volumes:
