@@ -4,10 +4,14 @@ services:
     image: xanmarta/shellinadocker:podman
     privileged: true
     ports:
-      - 8000:8000
+      - 8000:80
     volumes:
       - shell_data:/data
+      - shell_containers_1:/var/lib/containers
+      - shell_containers_2:/home/user/.local/share/containers
     restart: unless-stopped
 
 volumes:
   shell_data: {}
+  shell_containers_1: {}
+  shell_containers_2: {}
